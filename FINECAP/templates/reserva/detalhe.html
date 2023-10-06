@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+
+{% block center %} 
+  <h2> DETALHES RESERVAS </h2>
+
+  <table class="table table-bordered"> 
+    <thead>
+      <tr>
+        <th>CNPJ</th>
+        <th>Nome da Empresa</th>
+        <th>Categoria da Empresa</th>
+        <th>Quitado</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for reserva in reservas %}  
+      <tr>
+        <td>{{ reserva.cnpj }}</td>
+        <td>{{ reserva.nome_empresa }}</td>
+        <td>{{ reserva.categoria_empresa }}</td>
+        <td>{{ reserva.quitado }}</td>
+      </tr>
+      {% endfor %}
+    
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block center %}
+    <h2> Formulário de Matricula.</h2>
+       
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="nome" class="form-label">CNPJ</label>
+            {{ form.cnpj }}
+        </div>
+        
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome da Empresa</label>
+            {{ form.nome_empresa }}
+        </div>
+
+        <div class="mb-3">
+            <label for="nome" class="form-label">Categoria da Empresa</label>
+            {{ form.categoria_empresa }}
+        </div>
+        
+
+        <div class="mb-3">
+            <label for="nome" class="form-label">Quitado</label>
+            {{ form.quitado }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>    
+{% endblock %}
+   
